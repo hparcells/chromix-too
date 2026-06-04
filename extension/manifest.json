@@ -1,7 +1,7 @@
 {
   "name": "Chromix-Too",
-  "version": "0.0.2",
-  "manifest_version": 2,
+  "version": "0.0.3",
+  "manifest_version": 3,
   "description": "Command-line or scripted access to chrome's extension API.",
 
   "permissions": [
@@ -13,13 +13,13 @@
     "sessions",
     "notifications",
     "webNavigation",
+    "alarms"
+  ],
+  "host_permissions": [
     "<all_urls>"
   ],
 
-  "background": { "scripts":
-     [
-        "utils.js",
-        "background.js"
-     ]
+  "background": {
+    "service_worker": "background.js"
   }
 }

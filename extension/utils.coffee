@@ -1,4 +1,4 @@
-root = exports ? window
+root = exports ? self
 
 extend = root.extend = (hash1, hash2) ->
   hash1[key] = hash2[key] for own key of hash2
